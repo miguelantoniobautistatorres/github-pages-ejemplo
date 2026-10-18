@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: rgb(250, 235, 215);
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.header{
+    background-image: linear-gradient(
+        rgba(196, 196, 196, 0.2) 75%,
+        rgba(250, 235, 215, 1)100%
+    ), 
+    url(img/calendario.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        180deg,
+        rgb(235, 118, 22) 25%,
+        rgb(173, 72, 13) 100%
+    );
+}
+.menu h1{
+    margin-left: 20px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(236, 236, 236);
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.menu .navbar ul li a:hover {
+    color: brown;
+    background: linear-gradient(
+        0deg,
+        rgb(255, 193, 142) 25%,
+        rgb(212, 119, 65) 100%
+    );
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+.header-txt {
+    width: 50%;
+}
+.header-txt span {
+    font-size: 24px;
+    color:black;
+    text-transform: capitalize;
+}
+.header-txt h1 {
+    font-size: 50px;
+    line-height: 70px;
+    color: black;
+    margin-bottom: 50px;
+
+}
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    text-transform: capitalize;
+    color: rgb(51, 16, 8);
+    background: linear-gradient(
+        90deg,
+        rgb(235, 178, 22) 25%,
+        rgb(112, 70, 6) 100%
+    );
+    border-radius: 15px;
+}
+.header-img {
+    width: 50%;
+}
+.header-img img {
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.titulo-clases{
+    margin-top: 30px;
+    text-align: center;
+    color: #1d0d00;
+    border-inline-start: #1d0d00;
+}
+
+.bton{
+    height:70px;
+    font-size: 25px;
+    margin-left: 90%;
+    padding: 20px;
+    background-color: #e7cb97;
+    border-radius: 50%;
+}
+
+.clases {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.clase {
+    display: flex;
+    background-color: #f1c9a7;
+    border-radius: 20px;
+    margin: 60px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.clase img{
+    width: 480px;
+    height: 50%;
+    display: block;
+    border-radius: 20px;
+}
+
+.clase h1{
+    padding: 0.5%;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+
+
+
+@media(max-width:1291px){
+
+    .menu {
+        padding: 30px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #291102;
+        display: none;
+    }
+    .menu .navbar ul li a {
+        color: #f3a876;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    .menu .navbar ul li :hover{
+        background-color: #e6aa79;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .header{
+        min-height: 0vh;
+
+    }
+    .header-content{
+        flex-direction: column;
+        padding: 100px 30px 30px 30px;
+    }
+    .header-txt{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .header-txt h1 {
+        margin-bottom: 15px;
+    }
+    .header-img {
+        width: 300px;
+    }
+    .header-img img {
+        width: 300px;
+        height: 300px;
+    }
+    .clases{
+        flex-direction: column;
+    }
+}
+@media(max-width: 500px) {
+    .header{
+        width: 500px;
+    }
+    .menu{
+        position:fixed;
+        width:500px;
+    }
+    .clase img{
+        width: 300px;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:300px){
+    .clases {
+        margin: 20px;
+        padding: 0;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

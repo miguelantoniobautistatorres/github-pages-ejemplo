@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: rgb(250, 235, 215);
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.header{
+    background-image: linear-gradient(
+        270deg,
+        rgba(196, 196, 196, 0.2) 0%,
+        rgba(250, 235, 215, 1)100%
+    ), 
+    url(img/calendario.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        180deg,
+        rgb(235, 118, 22) 25%,
+        rgb(173, 72, 13) 100%
+    );
+}
+.menu h1{
+    margin-left: 20px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(236, 236, 236);
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.menu .navbar ul li a:hover {
+    color: brown;
+    background: linear-gradient(
+        0deg,
+        rgb(255, 193, 142) 25%,
+        rgb(212, 119, 65) 100%
+    );
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+.header-txt {
+    width: 50%;
+}
+.header-txt span {
+    font-size: 24px;
+    color:black;
+    text-transform: capitalize;
+}
+.header-txt h1 {
+    font-size: 50px;
+    line-height: 70px;
+    color: black;
+    margin-bottom: 50px;
+
+}
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    text-transform: capitalize;
+    color: rgb(51, 16, 8);
+    background-color: rgb(139, 139, 139);
+    border-radius: 5px;
+}
+.header-img {
+    width: 50%;
+}
+.header-img img {
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+
+.temas{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right:50px;
+}
+
+.contenedor a{
+    margin: 10px;
+}
+
+.contenedor{
+    margin: 5%;
+    padding: 0%;
+    display: flex;
+}
+.contenedor img{
+    margin: 20px;
+    width: 600px;
+    height: auto;
+}
+
+.row{
+    display: flex;
+    padding: 5px;
+    width: 40%;
+}
+.column{
+    flex: 25%;
+    padding: 15px;
+}
+
+.zoom-container {
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.zoomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease;
+  transform-origin: center center;
+}
+
+@media(max-width:500px){
+    .contenedor{
+        flex-direction: column;
+    }
+    .temas{
+        margin-top: 70px;
+    }
+    .zoom-container{
+        width: 400px;
+        height: 300px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .contenedor img{
+        margin: 20px;
+        width: 400px;
+        height: auto;
+    }
+}
+@media(max-width:400px){
+    .temas{
+        width: 270px;
+    }
+    .zoom-container{
+        width: 270px;
+        height: 230px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .contenedor img{
+        margin: 20px;
+        width: 270px;
+        height: auto;
+    }
+}
